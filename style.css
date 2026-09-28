@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+    background: #f4f4f4;
+    color: #111;
+    transition: 0.3s;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: #111;
+    color: white;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.logo span {
+    color: #ff3b30;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+#themeButton {
+    border: none;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 50px 8%;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)
+        ),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475")
+        center / cover;
+
+    color: white;
+}
+
+.hero div {
+    max-width: 700px;
+}
+
+.label {
+    color: #ff3b30;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.read-button {
+    margin-top: 25px;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #ff3b30;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* NEWS */
+
+.news-section {
+    padding: 50px 8%;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+}
+
+#searchInput {
+    padding: 12px;
+
+    width: 250px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* CATEGORY */
+
+.categories {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.category {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.category.active {
+    background: #111;
+    color: white;
+}
+
+
+/* NEWS CARD */
+
+.news-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+}
+
+.news-info {
+    padding: 20px;
+}
+
+.news-info h3 {
+    margin: 10px 0;
+}
+
+.news-info p {
+    color: #666;
+}
+
+.news-info button {
+    margin-top: 15px;
+
+    padding: 8px 15px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #111;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* MODAL */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.7);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+
+    max-width: 600px;
+    width: 100%;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+
+    right: 15px;
+    top: 10px;
+
+    border: none;
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* DARK MODE */
+
+.dark {
+    background: #181818;
+    color: white;
+}
+
+.dark .news-card {
+    background: #242424;
+}
+
+.dark .news-info p {
+    color: #bbb;
+}
+
+.dark .category {
+    background: #333;
+    color: white;
+}
+
+.dark .modal-content {
+    background: #242424;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #111;
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hero h2 {
+        font-size: 35px;
+    }
+
+    .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+}

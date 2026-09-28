@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEWSHUB</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <h1 class="logo">NEWS<span>HUB</span></h1>
+
+            <div class="nav-menu">
+                <a href="#">Home</a>
+                <a href="#berita">Berita</a>
+                <a href="#kategori">Kategori</a>
+            </div>
+
+            <button id="themeButton">🌙</button>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div>
+                <p class="label">BREAKING NEWS</p>
+
+                <h2>
+                    Teknologi AI Terus Berkembang,
+                    Dunia Memasuki Era Baru
+                </h2>
+
+                <p>
+                    Perkembangan teknologi kecerdasan buatan
+                    semakin memengaruhi kehidupan manusia.
+                </p>
+
+                <button class="read-button">
+                    Baca Berita
+                </button>
+            </div>
+
+        </section>
+
+
+        <section id="berita" class="news-section">
+
+            <div class="section-title">
+                <h2>Berita Terbaru</h2>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari berita..."
+                >
+            </div>
+
+
+            <div id="kategori" class="categories">
+
+                <button class="category active" data-category="Semua">
+                    Semua
+                </button>
+
+                <button class="category" data-category="Teknologi">
+                    Teknologi
+                </button>
+
+                <button class="category" data-category="Sains">
+                    Sains
+                </button>
+
+                <button class="category" data-category="Pendidikan">
+                    Pendidikan
+                </button>
+
+            </div>
+
+
+            <div id="newsContainer" class="news-container"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL BERITA -->
+
+    <div id="newsModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close">
+                ×
+            </button>
+
+            <p id="modalCategory"></p>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalDate"></p>
+
+            <p id="modalContent"></p>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>© 2026 NEWSHUB — Made for learning</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
